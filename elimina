@@ -1,10 +1,19 @@
 @echo off
-set "installer=python-installer.exe"
-set "installDir=C:\Python39"  REM Puoi cambiare il percorso di installazione se necessario
+set "installDir=C:\Python39"
+set "pythonInstaller=python-installer.exe"
 
 echo Installing Python...
-start /wait "" "%installer%" /quiet InstallAllUsers=1 PrependPath=1 Include_test=0 TargetDir="%installDir%"
 
+REM Crea una directory per l'installazione se non esiste già
+if not exist "%installDir%" mkdir "%installDir%"
+
+REM Copia l'installer di Python nella directory di installazione
+copy /Y "%pythonInstaller%" "%installDir%"
+
+REM Esegui l'installazione di Python in modalità silenziosa
+start /wait "" "%installDir%\%pythonInstaller%" /quiet InstallAllUsers=1 PrependPath=1 Include_test=0 TargetDir="%installDir%"
+
+REM Controlla se Python è stato installato correttamente
 if exist "%installDir%\python.exe" (
     echo Python installed successfully.
 ) else (
