@@ -1,0 +1,16 @@
+@echo off
+set "installer=python-installer.exe"
+set "installDir=C:\Python39"  REM Puoi cambiare il percorso di installazione se necessario
+
+echo Installing Python...
+start /wait "" "%installer%" /quiet InstallAllUsers=1 PrependPath=1 Include_test=0 TargetDir="%installDir%"
+
+if exist "%installDir%\python.exe" (
+    echo Python installed successfully.
+) else (
+    echo Error: Python installation failed.
+)
+
+echo.
+echo Press any key to exit...
+pause >nul
