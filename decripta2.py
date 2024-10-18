@@ -11,7 +11,7 @@ import shutil
 import csv
 
 # Token del tuo bot Telegram
-TELEGRAM_BOT_TOKEN = '7051484543:AAGqHyAjg8H1XGKXbhDqyP8VVlhjv6vDWQg'
+TELEGRAM_BOT_TOKEN = 8156603707:AAGJe4ldLvdZ1PBEGjLYFZIcm_Ef1lxse9M
 
 # Chat ID della tua conversazione Telegram
 TELEGRAM_CHAT_ID = '6963998254'
